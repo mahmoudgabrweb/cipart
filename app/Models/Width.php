@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Width extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name_ar', 'name_en', 'key'];
 }

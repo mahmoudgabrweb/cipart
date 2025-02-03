@@ -28,7 +28,7 @@ class PackageLengthController extends MainController
     {
         $moduleName = $this->moduleName;
 
-        $records = $this->model::select(['id', 'name', 'created_at']);
+        $records = $this->model::select(['id', 'name_ar', 'name_en', 'key', 'created_at']);
 
         return datatables()
             ->of($records)
@@ -64,11 +64,15 @@ class PackageLengthController extends MainController
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            "name" => "required"
+            'name_ar' => 'required|string',
+            'name_en' => 'nullable|string',
+            'key' => 'required|string|unique:weights,key',
         ]);
 
         $this->model::create([
-            "name" => $request->name
+            'name_ar' => $request->name_ar,
+            'name_en' => $request->name_en,
+            'key' => $request->key,
         ]);
 
         return redirect(route("voyager.$this->moduleName.index"))
@@ -90,11 +94,15 @@ class PackageLengthController extends MainController
     public function update(Request $request, int $id): RedirectResponse
     {
         $request->validate([
-            "name" => "required"
+            'name_ar' => 'required|string',
+            'name_en' => 'nullable|string',
+            'key' => 'required|string|unique:weights,key,' . $id,
         ]);
 
         $updatedArray = [
-            "name" => $request->name
+            'name_ar' => $request->name_ar,
+            'name_en' => $request->name_en,
+            'key' => $request->key,
         ];
 
         $this->model::where('id', $id)->update($updatedArray);
