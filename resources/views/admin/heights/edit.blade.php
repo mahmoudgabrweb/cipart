@@ -4,25 +4,25 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <h5 class="card-header">Edit Heights</h5>
+                    <h5 class="card-header">تعديل الارتفاع</h5>
                     <div class="card-body">
                         <form id="formValidationExamples" class="row g-6" method="POST"
                             action="{{ url("/admin/heights/$details->id") }}">
                             @csrf
                             @method('PUT')
                             <div class="col-md-12">
-                                <label class="form-label" for="name_ar">Arabic Height<span class="text-danger"> *</span></label>
+                                <label class="form-label" for="name_ar">الارتفاع بالعربية<span class="text-danger"> *</span></label>
                                 <input type="text" id="name_ar"
                                        class="form-control @error('name_ar') is-invalid @enderror"
-                                       placeholder="Enter Name" name="name_ar"
+                                placeholder="Enter Name" name="name_ar"
                                        value="{{ $details->name_ar}}" />
                                 @error('name_ar')
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <label class="form-label" for="name_en">English Height</label>
-                                <input type="text" id="name_en"
+                                <label class="form-label" for="name_en">الارتفاع بالإنجليزية</label>
+                                    <input type="text" id="name_en"
                                        class="form-control @error('name_en') is-invalid @enderror"
                                        placeholder="Enter Name" name="name_en"
                                        value="{{ $details->name_en}}" />
@@ -31,7 +31,7 @@
                                 @enderror
                             </div>
                             <div class="col-md-12">
-                                <label class="form-label" for="key">Key<span class="text-danger"> *</span></label>
+                                <label class="form-label" for="key">المفتاح <span class="text-danger"> *</span></label>
                                 <input type="text" id="key"
                                        class="form-control @error('key') is-invalid @enderror"
                                        placeholder="Enter Key" name="key"

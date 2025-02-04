@@ -66,7 +66,7 @@ class HeightController extends MainController
         $request->validate([
             'name_ar' => 'required|string',
             'name_en' => 'nullable|string',
-            'key' => 'required|string|unique:weights,key',
+            'key' => 'required|string|unique:heights,key',
         ]);
 
         $this->model::create([
@@ -96,7 +96,7 @@ class HeightController extends MainController
         $request->validate([
             'name_ar' => 'required|string',
             'name_en' => 'nullable|string',
-            'key' => 'required|string|unique:weights,key,' . $id,
+            'key' => 'required|string|unique:heights,key,' . $id,
         ]);
 
         $updatedArray = [

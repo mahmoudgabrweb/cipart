@@ -26,13 +26,9 @@ class DatabaseSeeder extends Seeder
             PropulsionTypePermissionSeeder::class,
             BodyTypePermissionSeeder::class,
             CylinderPermissionSeeder::class,
-            PackageWeightPermissionSeeder::class,
             WeightPermissionSeeder::class,
-            PackageWidthPermissionSeeder::class,
             WidthPermissionSeeder::class,
-            PackageHeightPermissionSeeder::class,
             HeightPermissionSeeder::class,
-            PackageLengthPermissionSeeder::class,
             LengthPermissionSeeder::class,
         ]);
     }

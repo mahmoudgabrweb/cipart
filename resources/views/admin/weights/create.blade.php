@@ -4,12 +4,12 @@
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <h5 class="card-header">Add New Weight</h5>
+                    <h5 class="card-header">إضافة وزن جديد</h5>
                     <div class="card-body">
                         <form id="formValidationExamples" class="row g-6" method="POST" action="{{ url('/admin/weights') }}">
                             @csrf
                             <div class="col-md-12">
-                                <label class="form-label" for="name_ar">Weight Arabic<span class="text-danger"> *</span></label>
+                                <label class="form-label" for="name_ar">الوزن بالعربية<span class="text-danger"> *</span></label>
                                 <input type="text" id="name_ar"
                                     class="form-control @error('name_ar') is-invalid @enderror"
                                     placeholder="Enter Name" name="name_ar" />
@@ -17,7 +17,7 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div><div class="col-md-12">
-                                <label class="form-label" for="name_en">Weight English</label>
+                                <label class="form-label" for="name_en">الوزن بالإنجليزية</label>
                                 <input type="text" id="name_en"
                                     class="form-control @error('name_en') is-invalid @enderror"
                                     placeholder="Enter Name" name="name_en" />
@@ -25,7 +25,7 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div><div class="col-md-12">
-                                <label class="form-label" for="key">Key <span class="text-danger"> *</span></label>
+                                <label class="form-label" for="key">المفتاح <span class="text-danger"> *</span></label>
                                 <input type="text" id="key"
                                     class="form-control @error('key') is-invalid @enderror"
                                     placeholder="Enter Key" name="key" />
