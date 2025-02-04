@@ -44,13 +44,9 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get("/cities/load", [CityController::class, "load"]);
     Route::get("/countries/load", [CountryController::class, "load"]);
     Route::get("/vehicle_models/load", [VehicleModelController::class, "load"]);
-    Route::get("/package_weights/load", [PackageWeightController::class, "load"]);
     Route::get("/weights/load", [WeightController::class, "load"]);
-    Route::get("/package_widths/load", [PackageWidthController::class, "load"]);
     Route::get("/widths/load", [WidthController::class, "load"]);
-    Route::get("/package_heights/load", [PackageHeightController::class, "load"]);
     Route::get("/heights/load", [HeightController::class, "load"]);
-    Route::get("/package_lengths/load", [PackageLengthController::class, "load"]);
     Route::get("/lengths/load", [LengthController::class, "load"]);
 
     Voyager::routes();

@@ -12,7 +12,9 @@
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>name</th>
+                            <th>Arabic name</th>
+                            <th>English name</th>
+                            <th>Key</th>
                             <th>Created At</th>
                             <th>Action</th>
                         </tr>

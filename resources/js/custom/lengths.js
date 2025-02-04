@@ -11,7 +11,9 @@ const ManufactureYear = function () {
             ajax: "/admin/lengths/load",
             columns: [
                 { data: 'id', name: 'id' },
-                { data: 'name', name: 'name' },
+                { data: 'name_ar', name: 'name_ar' },
+                { data: 'name_en', name: 'name_en' },
+                { data: 'key', name: 'key' },
                 { data: 'created_at', name: 'created_at' },
                 { data: 'actions', name: 'actions', orderable: false, searchable: false },
             ],
